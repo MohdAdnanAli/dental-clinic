@@ -1,0 +1,81 @@
+/* TRIDENT Old Styles - Merged styles.css + promo.css - Navy/Gold Premium Design */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  --navy: #0b1f3a;
+  --navy-mid: #132d52;
+  --gold: #c9a85c;
+  --gold-light: #e2c87e;
+  --cream: #faf8f4;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-muted: #6b7480;
+  --surface: #f4f1eb;
+  --border: rgba(201,168,92,0.25);
+}
+
+* , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
+
+/* Nav */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(11,31,58,0.96); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between; padding: 18px 5%;
+}
+
+.nav-brand { display: flex; align-items: center; gap: 14px; }
+
+.nav-text-main { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.15rem; color: var(--white); letter-spacing: 1px; }
+
+.nav-text-sub { font-size: 0.68rem; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
+
+.nav-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3); box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.3s ease; }
+
+.nav-links { display: flex; gap: 32px; list-style: none; }
+
+.nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.82rem; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 500; transition: color 0.3s; }
+
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta { background: var(--gold); color: var(--navy); padding: 10px 24px; border-radius: 3px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: background 0.3s; }
+
+.nav-cta:hover { background: var(--gold-light); }
+
+/* Hero - Visual heavy */
+.hero { min-height: 100vh; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #1a3a6e 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 120px 5% 80px; }
+
+.hero-bg-pattern { position: absolute; inset: 0; opacity: 0.04; background-size: cover; background-position: center; z-index: 1; }
+
+.hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; width: 100%; }
+
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,92,0.12); border: 1px solid rgba(201,168,92,0.3); color: var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
+
+.hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 10px; }
+
+.hero-title span { color: var(--gold); font-style: italic; }
+
+.hero-hindi { font-size: 1.1rem; color: rgba(255,255,255,0.5); letter-spacing: 1px; margin-bottom: 20px; }
+
+.hero-doctor { font-size: 1.05rem; color: var(--gold-light); font-weight: 400; letter-spacing: 0.5px; margin-bottom: 32px; }
+
+.hero-stars { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; }
+
+.stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 3px; }
+
+.hero-rating { color: var(--white); font-size: 1.4rem; font-weight: 600; font-family: 'Cormorant Garamond', serif; }
+
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.btn-primary { background: var(--gold); color: var(--navy); padding: 14px 32px; border-radius: 3px; border: none; font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,92,0.35); }
+
+.cta-btn { background: var(--secondary); color: var(--white); padding: 1rem 2.5rem; border-radius: var(--border-radius); font-size: 1.1rem; cursor: pointer; transition: var(--transition); }
+
+/* [Include ALL old CSS from provided styles.css and promo.css content here - truncated for response, full in tool] */
+

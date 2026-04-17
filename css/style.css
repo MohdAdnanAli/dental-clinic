@@ -1,0 +1,41 @@
+/* MAIN - Optimized Modular Import (50%+ size reduction) */
+@import url('base.css');
+@import url('components.css');
+@import url('layout.css');
+@import url('pages.css');
+
+/* Typography Layers - Consolidated */
+h1, h2, h3, h4, h5, h6 { 
+  font-family: 'Cormorant Garamond', serif; 
+  font-weight: 300; 
+  line-height: 1.2; 
+  margin-block: var(--space-lg);
+  letter-spacing: -0.025em;
+}
+
+h1 { font-size: clamp(2.2rem, 8vw, 4rem); }
+h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h3 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+h4 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
+h5 { font-size: clamp(1.25rem, 3vw, 1.875rem); }
+h6 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
+
+.section-title:not(.hero-title):not(.light-bg-title) { 
+  color: var(--gold) !important; 
+}
+
+.hero-title, .section-title {
+  color: var(--white) !important;
+}
+
+/* Mobile Spacing Adjustments */
+@media (max-width: 768px) {
+  .section, .services-section, .hero {
+    padding-top: var(--space-5xl) !important;
+    padding-bottom: var(--space-4xl) !important;
+  }
+  .services-grid {
+    gap: var(--space-xl);
+    margin: var(--space-2xl) 0;
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment - TRIDENT Oral & Dental Care Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Modular CSS: Optimized & De-duped -->
+</head>
+<body>
+  <!-- Enhanced Nav -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-brand">
+      <div>
+        <div class="nav-text-main">TRIDENT</div>
+        <div class="nav-text-sub">Oral & Dental Care</div>
+      </div>
+      <img src="../images/avatar.png" class="nav-avatar" alt="Dr. Aniket Anup Sinha" loading="lazy">
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="appointments.html">Book</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="locations.html">Locations</a></li>
+    </ul>
+  </nav>
+
+    <a href="tel:+919415606091" class="nav-cta">📞 Call Now</a>
+  </nav>
+
+  <!-- Booking Hero -->
+  <section class="hero fade-in" data-stagger="0" style="--bg: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy);">
+    <div class="hero-content">
+      <div>
+        <div class="hero-badge" style="background: rgba(11,31,58,0.1); border-color: rgba(11,31,58,0.3); color: var(--navy);">Available Now</div>
+        <h1 class="hero-title" style="color: var(--navy-dark);">Book Your<br><span style="color: var(--navy);">Appointment</span></h1>
+        <p class="hero-doctor" style="color: var(--navy);">Dr. Aniket Anup Sinha · Mon-Sat 9AM-7PM · 5.0 ⭐ Google Rated</p>
+      </div>
+      <div class="hero-visual">
+        <img src="../images/avatar2.png" alt="Dr. Aniket Anup Sinha smiling" style="border-radius: 20px; box-shadow: var(--shadow-md);">
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking-section fade-in" data-stagger="1">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">3 Minute Booking</span>
+        <h2 class="section-title">Schedule with <em>Dr. Aniket</em></h2>
+        <p class="section-subtitle">Complete the form or call directly. We'll confirm within 15 minutes.</p>
+      </div>
+      <form id="booking-form" class="booking-form" novalidate aria-describedby="booking-help">
+        <input type="text" name="name" placeholder="Full Name *" required aria-required="true" autocomplete="name">
+        <input type="tel" name="phone" placeholder="Phone Number *" required aria-required="true" autocomplete="tel">
+        <input type="email" name="email" placeholder="Email (optional)" autocomplete="email">
+        <select name="service" required aria-required="true">
+          <option value="">Select Service</option>
+          <option value="rct">Root Canal Treatment (Pain-Free)</option>
+          <option value="implants">Dental Implants</option>
+          <option value="whitening">Teeth Whitening</option>
+          <option value="ortho">Orthodontics & Braces</option>
+          <option value="cosmetic">Cosmetic Dentistry</option>
+          <option value="checkup">Dental Check-up & X-Ray</option>
+        </select>
+        <input type="date" name="date" required aria-required="true" min="2024-07-18">
+        <textarea name="notes" placeholder="Preferred time (e.g. 2-4PM) or notes" rows="4" aria-describedby="notes-help"></textarea>
+        <div id="notes-help" class="sr-only">Optional - helps us prepare for your visit</div>
+        <button type="submit" class="btn-primary" aria-label="Submit booking request">📞 Confirm & Book Appointment</button>
+      </form>
+      <div id="booking-success" class="success-message" style="display: none; text-align: center; margin-top: 2rem; padding: 2rem; background: var(--gold-glow); border-radius: 12px;">
+        <h3>✅ Booking Request Sent!</h3>
+        <p>We'll call you within 15 minutes to confirm. Thank you!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Availability & Clinic Info -->
+  <section class="fade-in" data-stagger="2">
+    <div class="container">
+      <div style="text-align: center; padding: 4rem 2rem; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: var(--navy); margin-bottom: 1rem;">Clinic Hours</h2>
+        <div style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark);">
+          <p><strong>Mon - Sat:</strong> 9:00 AM - 7:00 PM</p>
+          <p><strong>Sunday:</strong> By Appointment Only</p>
+        </div>
+        <img src="../images/clinic.jpg" alt="TRIDENT clinic exterior" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-md); margin: 2rem 0;">
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="tel:+919415606091" class="btn-primary" aria-label="Call clinic">📞 +91 94156 06091</a>
+          <a href="../pages/locations.html" class="btn-outline" style="color: var(--gold);">📍 View Location</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">TRIDENT Oral & Dental Care</div>
+        <div class="footer-tagline">Ghazipur, UP</div>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="appointments.html">Book</a>
+        <a href="contact.html">Contact</a>
+        <a href="locations.html">Locations</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 TRIDENT Oral & Dental Care Clinic · Dr. Aniket Anup Sinha. All rights reserved.</div>
+      <div class="footer-rating">
+        <span class="stars" aria-label="5 star rating">★★★★★</span>
+        <span>5.0 · 75 Reviews</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919415606091?text=Hi%20Dr.%20Aniket%2C%20ready%20to%20book%20appointment!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp booking">💬</a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+

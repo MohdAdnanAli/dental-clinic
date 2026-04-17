@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - TRIDENT Oral & Dental Care Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Modular CSS: Optimized & De-duped -->
+</head>
+<body>
+  <!-- Enhanced Nav -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-brand">
+      <div>
+        <div class="nav-text-main">TRIDENT</div>
+        <div class="nav-text-sub">Oral & Dental Care</div>
+      </div>
+      <img src="../images/avatar.png" class="nav-avatar" alt="Dr. Aniket Anup Sinha" loading="lazy">
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="appointments.html">Book</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="locations.html">Locations</a></li>
+    </ul>
+  </nav>
+
+    <a href="tel:+919415606091" class="nav-cta">📞 Call Now</a>
+  </nav>
+
+  <!-- Gallery Hero - Standardized like other pages -->
+  <section class="hero fade-in" data-stagger="0">
+    <div class="hero-bg-pattern" style="background-image: url('../images/clinic.jpg'); transform: rotate(180deg);"></div>
+    <div class="hero-content">
+      <div>
+        <div class="hero-badge">Visual Tour</div>
+        <h1 class="hero-title">Clinic <span>& Gallery</span></h1>
+        <p class="hero-doctor">Modern facilities · Hygienic environment · Patient comfort first</p>
+      </div>
+      <img src="../images/facilities.jpg" 
+           srcset="../images/facilities.jpg 800w, ../images/facilities-400.jpg 400w" 
+           sizes="(max-width: 768px) 100vw, 50vw"
+           alt="TRIDENT clinic facilities" 
+           loading="eager"
+           width="800" height="600"
+           style="border-radius: 16px; box-shadow: var(--shadow-md);">
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery-section fade-in" data-stagger="1">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">See Our <em>Facilities</em></h2>
+        <p class="section-subtitle">360° View – Clean, modern, and comfortable - designed for your peace of mind.</p>
+      </div>
+      <div class="gallery-grid" role="region" aria-label="Clinic gallery">
+        <div class="gallery-item fade-in" data-stagger="2">
+          <img src="../images/facilities.jpg" 
+               srcset="../images/facilities.jpg 800w, ../images/facilities-400.jpg 400w" 
+               sizes="(max-width: 768px) 100vw, 400px"
+               alt="Modern dental treatment room with advanced equipment" 
+               loading="lazy"
+               width="800" height="600">
+          <div class="gallery-label">Advanced Treatment Suite</div>
+        </div>
+        <div class="gallery-item fade-in" data-stagger="3">
+          <img src="../images/gold medal and certificates.jpg" 
+               srcset="../images/gold medal and certificates.jpg 800w, ../images/gold medal and certificates-400.jpg 400w" 
+               sizes="(max-width: 768px) 100vw, 400px"
+               alt="Dr. Aniket's gold medals and certificates displayed" 
+               loading="lazy"
+               width="800" height="600">
+          <div class="gallery-label">🏆 Achievements & Certifications</div>
+        </div>
+        <div class="gallery-item fade-in" data-stagger="4">
+          <video class="gallery-video" playsinline muted loop loading="lazy" poster="../images/clinic.jpg" aria-label="Clinic tour video">
+            <source src="../images/videoplayback.mp4" type="video/mp4" media="(min-width: 768px)">
+            Your browser does not support video.
+          </video>
+          <div class="gallery-label">📹 Interactive Clinic Tour</div>
+        </div>
+        <div class="gallery-item fade-in" data-stagger="5">
+          <img src="../images/clinic.jpg" 
+               srcset="../images/clinic.jpg 800w, ../images/clinic-400.jpg 400w" 
+               sizes="(max-width: 768px) 100vw, 400px"
+               alt="Reception and waiting area" 
+               loading="lazy"
+               width="800" height="600">
+          <div class="gallery-label">Comfortable Waiting Area</div>
+        </div>
+        <div class="gallery-item fade-in" data-stagger="6">
+          <img src="../images/clinic2.jpg" 
+               srcset="../images/clinic2.jpg 800w, ../images/clinic2-400.jpg 400w" 
+               sizes="(max-width: 768px) 100vw, 400px"
+               alt="Sterilization and lab area" 
+               loading="lazy"
+               width="800" height="600">
+          <div class="gallery-label">State-of-the-Art Sterilization</div>
+        </div>
+      </div>
+      <p style="text-align: center; margin: 3rem 0; font-size: 0.9rem; color: var(--text-muted);">
+        📍 <a href="https://maps.app.goo.gl/your-clinic-link" target="_blank" rel="noopener" style="color: var(--gold);">View on Google Maps</a> · 360° Street View Available
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section style="padding: 80px 5%; text-align: center; background: var(--navy); color: var(--white);">
+    <div class="container">
+      <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem; color: var(--gold)">Ready to Visit?</h2>
+      <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem;">Experience our facilities firsthand</p>
+      <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+        <a href="../pages/appointments.html" class="btn-primary" style="background: var(--gold); color: var(--navy);">📅 Book Your Visit</a>
+        <a href="../pages/locations.html" class="btn-outline" style="border-color: var(--gold); color: var(--gold);">📍 Get Directions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">TRIDENT Oral & Dental Care</div>
+        <div class="footer-tagline">Ghazipur, UP</div>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="appointments.html">Book</a>
+        <a href="contact.html">Contact</a>
+        <a href="locations.html">Locations</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 TRIDENT Oral & Dental Care Clinic · Dr. Aniket Anup Sinha. All rights reserved.</div>
+      <div class="footer-rating">
+        <span class="stars" aria-label="5 star rating">★★★★★</span>
+        <span>5.0 · 75 Reviews</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919415606091?text=Hi%20Dr.%20Aniket%2C%20saw%20your%20gallery.%20Interested%20in%20visiting!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp gallery inquiry">💬</a>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
+

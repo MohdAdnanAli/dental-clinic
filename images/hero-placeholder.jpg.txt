@@ -1,0 +1,3 @@
+Placeholder note: Replace with high-res hero image/video (1920x1080). Use Unsplash: https://unsplash.com/s/photos/dentist-chair or local upload. data-src lazy loaded.
+
+For intensive visuals: Add videos/ dir for hero bg video/mp4.
