@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', initSite);
 
 function initSite() {
-  console.log('TRIDENT: initSite called, loading parallax...');
+
   try {
     initNav();
     initSmoothScroll();
@@ -14,7 +14,7 @@ function initSite() {
     initAnimations();
     initParallax();
   } catch (e) {
-    console.error('TRIDENT initSite error:', e);
+  console.error(e);
   }
 }
 
@@ -273,12 +273,12 @@ function initAnimations() {
 }
 
 function initParallax() {
-  console.log('initParallax called, width:', window.innerWidth, 'reduced-motion?', window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 1024) {
-    console.log('Parallax disabled: mobile/reduced-motion');
+
     return;
   }
-  console.log('Parallax enabled for desktop');
+
 
   // Single global RAF parallax
   let ticking = false;
@@ -310,7 +310,7 @@ function initParallax() {
     // video.playbackRate = 2.0;
     video.loop = true;
     video.muted = true;
-    video.play().catch(e => console.log('Video autoplay failed:', e));
+    video.play().catch(() => {});
     video.addEventListener('ended', () => {
       video.currentTime = 12;
       video.play();

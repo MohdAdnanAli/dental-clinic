@@ -417,6 +417,62 @@ nav.glass {
   align-items: center; 
 }
 
+/* Mobile-first hero optimizations */
+@media (max-width: 480px) {
+  .hero {
+    padding: var(--space-2xl) var(--container-padding) var(--space-xl);
+    min-height: 100vh;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.2rem, 7vw, 3rem) !important;
+    line-height: 1.15;
+  }
+  
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline {
+    width: 100%;
+    max-width: none;
+    padding: var(--space-md) var(--space-lg);
+    font-size: 1rem;
+    min-height: 3.5rem;
+  }
+  
+  .hero-doctor-card {
+    width: 95vw;
+    max-width: 36rem;
+    height: clamp(22rem, 35vh, 28rem);
+  }
+  
+  .hero-doctor-name {
+    font-size: clamp(1rem, 3.5vw, 1.3rem) !important;
+    bottom: 5.5rem;
+  }
+  
+  .hero-doctor-locations {
+    font-size: 0.75rem;
+    bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    gap: var(--space-3xl);
+  }
+  
+  .hero-actions {
+    flex-direction: row;
+    gap: var(--space-lg);
+  }
+  
+  .btn-primary, .btn-outline {
+    width: auto;
+    max-width: 16rem;
+  }
+}
+
 /* BUTTONS */
 .btn-primary, .btn-outline { 
   padding: var(--space-sm) var(--space-xl); 
