@@ -274,24 +274,25 @@ function initAnimations() {
 
 function initParallax() {
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 1024) {
-
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     return;
   }
 
-
-  // Single global RAF parallax
+  // Single global RAF parallax - Mobile optimized
   let ticking = false;
   const raf = () => {
-    const scrolled = window.pageYOffset * 0.6;
     const hero = document.querySelector('.hero');
     const bgPattern = hero?.querySelector('.hero-bg-pattern');
     if (bgPattern && hero) {
       const rect = hero.getBoundingClientRect();
-      const parallaxSpeed = 0.5;
-      const yPos = -(rect.top * parallaxSpeed);
-      bgPattern.style.transform = `translateY(${yPos}px) scale(1.1)`;
-      bgPattern.style.objectPosition = `50% ${50 + yPos * 0.1}%`;
+      const isMobile = window.innerWidth < 768;
+      const parallaxSpeed = isMobile ? 0.3 : 0.5;
+      const scrolled = window.pageYOffset * (isMobile ? 0.4 : 0.6);
+      let yPos = -(rect.top * parallaxSpeed);
+      // Clamp for mobile performance
+      yPos = Math.max(-50, Math.min(50, yPos));
+      bgPattern.style.transform = `translateY(${yPos}px) scale(${isMobile ? 1.05 : 1.1})`;
+      bgPattern.style.objectPosition = `50% ${50 + (yPos * 0.1)}%`;
     }
     ticking = false;
   };

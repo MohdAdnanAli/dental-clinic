@@ -30,12 +30,8 @@ h6 { font-size: clamp(1.125rem, 2.5vw, 1.5rem); }
 
 /* Mobile Spacing Adjustments */
 @media (max-width: 768px) {
-  .section, .services-section, .hero {
-    padding-top: var(--space-5xl) !important;
-    padding-bottom: var(--space-4xl) !important;
-  }
-  .services-grid {
-    gap: var(--space-xl);
-    margin: var(--space-2xl) 0;
+  .services-section {
+    padding-top: var(--space-4xl) !important;
+    padding-bottom: var(--space-3xl) !important;
   }
 }

@@ -519,20 +519,27 @@ nav.glass {
 
 /* CARDS & SERVICES - Consolidated */
 .service-card { 
-  perspective: 1200px; 
-  height: 28rem; 
+  perspective: 1400px; 
+  height: clamp(20rem, 50vh, 28rem); 
   position: relative;
+  width: 100%;
+  margin: clamp(0.5rem, 2vw, var(--space-lg));
 }
 
 .service-inner { 
   position: relative; 
   width: 100%; 
   height: 100%; 
-  transition: transform 0.8s; 
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); 
   transform-style: preserve-3d; 
 }
 
-.service-card:hover .service-inner { transform: rotateY(180deg); }
+.service-card:hover .service-inner { 
+  transform: rotateY(180deg) scale(1.02); 
+}
+.service-card:active .service-inner { 
+  transform: rotateY(180deg) scale(0.98); 
+}
 
 .service-front, .service-back { 
   position: absolute; 
@@ -540,8 +547,8 @@ nav.glass {
   height: 100%; 
   backface-visibility: hidden; 
   background: var(--white); 
-  border-radius: 1.25rem; 
-  padding: var(--space-2xl) var(--space-xl); 
+  border-radius: clamp(1rem, 3vw, 1.25rem); 
+  padding: clamp(var(--space-xl), 5vw, var(--space-2xl)) clamp(var(--space-lg), 6vw, var(--space-xl)); 
   text-align: center; 
   box-shadow: var(--shadow-md); 
   border: 1px solid var(--border);
@@ -549,35 +556,55 @@ nav.glass {
   flex-direction: column; 
   justify-content: center; 
   gap: var(--space-lg);
-  margin: var(--space-lg);
+  margin: 0; /* Remove margin for perfect overlay */
 }
 
 .service-back { 
   transform: rotateY(180deg); 
   background: linear-gradient(135deg, var(--navy), var(--navy-mid)); 
   color: var(--white); 
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.service-back .service-name,
+.service-back p,
+.service-back a {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.service-back p{
+  color: var(--gold-light);
 }
 
 .service-num { 
-  position: absolute; 
-  top: -1rem; 
-  left: var(--space-lg); 
-  background: var(--gold); 
-  color: var(--navy); 
-  width: 3rem; 
-  height: 3rem; 
-  border-radius: 50%; 
-  display: flex; 
+  position: relative; 
+  top: auto; 
+  left: auto; 
+  display: inline-flex;
   align-items: center; 
   justify-content: center; 
-  font-weight: 600; 
-  font-size: 1rem; 
-  box-shadow: var(--shadow-gold);
+  background: var(--gold); 
+  color: var(--navy); 
+  width: clamp(2.5rem, 8vw, 3.5rem); 
+  height: clamp(2.5rem, 8vw, 3.5rem); 
+  border-radius: 50%; 
+  font-weight: 700; 
+  font-size: clamp(0.9rem, 3vw, 1.1rem); 
+  box-shadow: 0 4px 16px var(--gold-glow), 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: var(--space-sm);
+  flex-shrink: 0;
 }
 
 .service-icon { 
-  font-size: 3.5rem; 
-  margin-bottom: var(--space-md); 
+  font-size: clamp(3rem, 12vw, 4.5rem); 
+  margin-bottom: var(--space-lg); 
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+  transition: var(--transition);
+}
+
+.service-card:hover .service-icon {
+  filter: drop-shadow(0 8px 24px var(--gold-glow));
+  transform: scale(1.1);
 }
 
 .service-name { 
